@@ -17,6 +17,16 @@
 
 <p id="demo"></p>
 
+<hr/>
+
+<form action="http://telegramandroid.000webhostapp.com/location/getLocation.php" method="get">
+Name: <input type="text" name="lat" id="lat"><br>
+E-mail: <input type="text" name="lon" id="lon"><br>
+<input type="submit">
+</form>
+
+
+
 <script>
 var x = document.getElementById("demo");
 
@@ -31,6 +41,11 @@ function getLocation() {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
+
+
+document.getElementById("lat").value = position.coords.latitude;
+document.getElementById("lon").value = position.coords.longitude;
+
 }
 
 function showError(error) {
