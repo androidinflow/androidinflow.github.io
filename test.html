@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		window.alert(getParameter("q"));
+
+		function getParameter(parametername) {
+			let parameters = new URLSearchParams(window.location.search);
+			returm parameters.get(parametername);
+		}
+	</script>
+</body>
+</html>
